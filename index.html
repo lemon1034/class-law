@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="U/Users/siwoolee/Library/Mobile Documents/com~apple~TextEdit/Documents/index.html.txtTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국가법령정보포털 스타일 - 우리반 학급규칙</title>
+    <style>
+        /* 기본 스타일 리셋 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Malgun Gothic', dotum, sans-serif; color: #333; background-color: #f4f6f9; display: flex; flex-direction: column; height: 100vh; }
+
+        /* 상단 헤더 (국가법령정보포털 느낌) */
+        header { background-color: #0B2545; color: white; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        header h1 { font-size: 20px; font-weight: bold; letter-spacing: -1px; }
+        header h1 span { color: #8da9c4; font-size: 14px; margin-left: 10px; }
+        .current-date { font-size: 14px; color: #eee; }
+
+        /* 메인 컨텐츠 영역 (좌측 메뉴 + 우측 본문) */
+        .container { display: flex; flex: 1; overflow: hidden; }
+
+        /* 좌측 사이드바 (목차) */
+        nav { width: 250px; background-color: #ffffff; border-right: 1px solid #dcdcdc; padding: 20px 15px; overflow-y: auto; }
+        nav h2 { font-size: 16px; margin-bottom: 15px; color: #0B2545; border-bottom: 2px solid #0B2545; padding-bottom: 5px; }
+        nav ul { list-style: none; }
+        nav li { margin-bottom: 10px; }
+        nav a { text-decoration: none; color: #555; font-size: 14px; display: block; padding: 6px 10px; border-radius: 4px; transition: 0.2s; }
+        nav a:hover { background-color: #eef4f8; color: #0B2545; font-weight: bold; }
+
+        /* 우측 본문 영역 */
+        main { flex: 1; padding: 30px; overflow-y: auto; background-color: #ffffff; margin: 15px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+        
+        /* 법령 문서 스타일 */
+        .law-title { font-size: 24px; font-weight: bold; color: #111; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px; text-align: center; }
+        .law-meta { text-align: right; font-size: 13px; color: #666; margin-bottom: 30px; }
+        
+        .chapter { font-size: 18px; font-weight: bold; color: #0B2545; margin-top: 30px; margin-bottom: 15px; padding-bottom: 5px; border-bottom: 1px dashed #ccc; }
+        .article { font-size: 15px; margin-bottom: 12px; line-height: 1.6; scroll-margin-top: 20px; }
+        .article-title { font-weight: bold; color: #222; }
+        .clause { margin-left: 20px; color: #444; }
+
+        /* 하단 푸터 */
+        footer { background-color: #e1e5ea; text-align: center; padding: 10px; font-size: 12px; color: #666; border-top: 1px solid #dcdcdc; }
+    </style>
+</head>
+<body>
+
+    <!-- 헤더 -->
+    <header>
+        <h1>⚖️ 학급법령정보센터 <span>Class Law Information Center</span></h1>
+        <div class="current-date" id="live-date"></div>
+    </header>
+
+    <!-- 메인 컨텐츠 -->
+    <div class="container">
+        <!-- 좌측 목차 이동 메뉴 -->
+        <nav>
+            <h2>법령 목차</h2>
+            <ul>
+                <li><a href="#chapter1">제1장 총칙</a></li>
+                <li><a href="#chapter2">제2장 교실 생활 및 예절</a></li>
+                <li><a href="#chapter3">제3장 스마트폰 및 전자기기</a></li>
+                <li><a href="#chapter4">제4장 벌칙 및 포상</a></li>
+            </ul>
+        </nav>
+
+        <!-- 우측 규칙 본문 -->
+        <main>
+            <div class="law-title">우리반 행복 추구 및 질서 유지를 위한 학급 규칙</div>
+            <div class="law-meta">[시행 2026. 3. 2.] [제1호, 2026. 3. 2., 제정]</div>
+
+            <!-- 제1장 -->
+            <div id="chapter1" class="chapter">제1장 총칙</div>
+            <div id="art1" class="article">
+                <span class="article-title">제1조(목적)</span> 이 규칙은 우리 반의 상호 존중과 쾌적한 학습 환경 조성을 목적으로 한다.
+            </div>
+            <div id="art2" class="article">
+                <span class="article-title">제2조(기본 책무)</span> 모든 학생은 타인의 학습권을 침해하지 아니하며, 교실 내 청결을 유지할 의무를 가진다.
+            </div>
+
+            <!-- 제2장 -->
+            <div id="chapter2" class="chapter">제2장 교실 생활 및 예절</div>
+            <div id="art3" class="article">
+                <span class="article-title">제3조(등교 및 지각)</span> 
+                <div class="clause">① 모든 학생은 오전 8시 40분까지 지정된 좌석에 착석하여야 한다.</div>
+                <div class="clause">② 무단 지각 3회 누적 시, 일주일간 교실 분리수거 의무를 부과한다.</div>
+            </div>
+            <div id="art4" class="article">
+                <span class="article-title">제4조(상호 존중)</span> 
+                <div class="clause">① 학우 간 비속어, 비하 발언 및 저속한 은어 사용을 금지한다.</div>
+                <div class="clause">② 말다툼이나 갈등 발생 시, 당사자 간 해결이 어려울 경우 학급 자치회나 담임교사에게 중재를 요청할 수 있다.</div>
+            </div>
+
+            <!-- 제3장 -->
+            <div id="chapter3" class="chapter">제3장 스마트폰 및 전자기기</div>
+            <div id="art5" class="article">
+                <span class="article-title">제5조(조례 시간 제출)</span> 
+                <div class="clause">① 일과 시간 중 스마트폰은 조례 시 전량 수거함에 제출하는 것을 원칙으로 한다.</div>
+                <div class="clause">② 수업 중 허가받지 않은 전자기기(태블릿, 스마트워치 등)의 사용은 금지한다.</div>
+            </div>
+
+            <!-- 제4장 -->
+            <div id="chapter4" class="chapter">제4장 벌칙 및 포상</div>
+            <div id="art6" class="article">
+                <span class="article-title">제6조(칭찬 스티커 제도)</span> 학급 발전에 기여하거나 타의 모범이 된 자에게는 학급 자치회의를 거쳐 포상을 수여할 수 있다.
+            </div>
+        </main>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+        © 2026 우리반 학급자치위원회. All Rights Reserved.
+    </footer>
+
+    <script>
+        // 오늘 날짜 표시 기능 (법령포털 느낌 추가)
+        const today = new Date();
+        const dateString = `${today.getFullYear()}년 ${today.getMonth() + 1}월 ${today.getDate()}일 기준`;
+        document.getElementById('live-date').innerText = dateString;
+    </script>
+</body>
+</html>
